@@ -7,7 +7,7 @@ body {
   background-image: url(https://cdn.glitch.global/f03dfeb0-8dc6-4bd6-99a3-ee0802fad404/POYO_arata-04.png?v=1705724844642);
   background-size: contain;
   background-position: center;
-  background-color: #000000;
+  background-color: #fff;
   background-repeat: no-repeat;
 }
 .sora{
@@ -15,11 +15,14 @@ body {
   font-size:30px;
   
 }
-.sora h1{
-  color: #00ffff;
-  font-size:30px;
-  width:300px;
-  height:100px;
+
+.sora1{
+  width:1000px;
+  height:500px;
+  padding-left:200px;
+  text-align:center;
+  
+  
 }
 .sora p{
   color: #00ff00;
@@ -27,11 +30,25 @@ body {
   width:300px;
   height:100px;
   
+  
 }
-.sora a{
+.sora2{
+  
+}
+.neko{
+  
+}
 
+.sora h1{
+  color: #00ffff;
+  font-size:30px;
+  width:300px;
+  height:100px;
   
   
+}
+
+.sora a{
 
 }
 .sora p:hover{
@@ -40,6 +57,10 @@ body {
 
 
 }
+
+
+
+
 
 
 
