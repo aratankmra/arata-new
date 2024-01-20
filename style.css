@@ -15,8 +15,16 @@ body {
   font-size:30px;
 }
 .sora p{
-  
+  color: #00ff00;
+  font-size:30px;
 }
+.sora a{
+  color: #00ff00;
+  font-size:30px;
+  text-decoration: none;
+
+}
+
 
 #riku{
   color: #ffffff;
