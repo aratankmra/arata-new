@@ -13,17 +13,34 @@ body {
 .sora{
   color: #ffffff;
   font-size:30px;
+  
+}
+.sora h1{
+  color: #00ffff;
+  font-size:30px;
+  width:300px;
+  height:100px;
 }
 .sora p{
   color: #00ff00;
   font-size:30px;
+  width:300px;
+  height:100px;
+  
 }
 .sora a{
-  color: #00ff00;
-  font-size:30px;
-  text-decoration: none;
+
+  
+  
 
 }
+.sora p:hover{
+  color: #000000;
+  font-size:30px;
+
+
+}
+
 
 
 #riku{
