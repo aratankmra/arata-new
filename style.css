@@ -95,7 +95,8 @@ END Glitch hello-app default styles
 
 body {
   font-family: HK Grotesk;
-  background-color: var(--color-bg);
+  background-image: url(https://cdn.glitch.global/f03dfeb0-8dc6-4bd6-99a3-ee0802fad404/POYO_arata-04.png?v=1705724844642);
+  background-size: contain;
 }
 
 /* Page structure */
