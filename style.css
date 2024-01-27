@@ -6,7 +6,7 @@ body {
 /*  クラスの場合は.から*/
 .bg{
   width: 100%;
-  height: 600px;
+  height: 700px;
   background-image: url(https://cdn.glitch.global/f03dfeb0-8dc6-4bd6-99a3-ee0802fad404/drowing_lonelygarden-02.png?v=1706327587842);
   background-position: center;
   background-size: contain;
@@ -16,14 +16,20 @@ body {
 /* タブレット */
 @media (max-width: 768px) {
 　.bg {
-   height: 300px;
+   height: 600px;
+   background-position: center;
+   background-size: contain;
+   background-repeat: no-repeat;
   }
 }
 
 /* SP */
 @media (max-width: 425px) {
   .bg {
-   height: 200px;
+   height: 500px;
+   background-position: center;
+   background-size: contain;
+   background-repeat: no-repeat;
   }
 }
 
@@ -39,6 +45,4 @@ body {
 
 .foot{
   color: #fcfcfc;
-  width:500px;
-  height:300px;
 }
