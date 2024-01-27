@@ -1,13 +1,10 @@
-
-
 body {
   
-  height:500px;
   font-family: HK Grotesk;
-  background-image: url(https://cdn.glitch.global/f03dfeb0-8dc6-4bd6-99a3-ee0802fad404/POYO_arata-04.png?v=1705724844642);
+  background-image: url(https://cdn.glitch.global/f03dfeb0-8dc6-4bd6-99a3-ee0802fad404/drowing_lonelygarden-02.png?v=1706327587842);
   background-size: contain;
   background-position: center;
-  background-color: #fff;
+  background-color: #fcfcfc;
   background-repeat: no-repeat;
 }
 .sora{
@@ -65,7 +62,7 @@ body {
 
 
 #riku{
-  color: #ffffff;
+  color: #000000;
   font-size:30px;
 }
 /*  クラスの場合は.から*/
