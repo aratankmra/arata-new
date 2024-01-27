@@ -1,22 +1,23 @@
 body {
-  
   font-family: HK Grotesk;
   background-image: url(https://cdn.glitch.global/f03dfeb0-8dc6-4bd6-99a3-ee0802fad404/drowing_lonelygarden-02.png?v=1706327587842);
-  background-size: contain;
+  background-size: 500px;
   background-position: center;
   background-color: #fcfcfc;
   background-repeat: no-repeat;
 }
-.sora{
-  color: #ffffff;
-  font-size:30px;
+
+.text{
+  color: #000000;
+  font-size:10px;
+  text-align:center;
   
 }
 
 .sora1{
   width:1000px;
   height:500px;
-  padding-left:200px;
+  padding-left:0px;
   text-align:center;
   
   
@@ -38,7 +39,7 @@ body {
 
 .sora h1{
   color: #00ffff;
-  font-size:30px;
+  font-size:0px;
   width:300px;
   height:100px;
   
@@ -74,13 +75,6 @@ body {
   font-size: 20px;
   line-height: 105%;
   margin: 0;
-}
-
-
-.illustration {
-  max-width: 100%;
-  max-height: var(--image-max-width);
-  margin-top: var(--image-margin);
 }
 
 
