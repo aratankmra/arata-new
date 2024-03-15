@@ -1,3 +1,10 @@
+@charset"UTF-8"
+
+/* タブレット */
+html {
+  font-size: 100%;  
+}
+  
 body {
   font-family: HK Grotesk;
   background-color: #fcfcfc;
