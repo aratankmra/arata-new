@@ -39,9 +39,10 @@ img {
   background-color: #ffffff;
   background-position: center bottom;
   background-repeat: no-repeat;
+  background-size: contain;
   height: 600px;
 }
 
 .cover-home{
-  background-image: url(https://cdn.glitch.global/f03dfeb0-8dc6-4bd6-99a3-ee0802fad404/lonelygarden-bg-10.png?v=1710510669783);
+  background-image: url(https://cdn.glitch.global/f03dfeb0-8dc6-4bd6-99a3-ee0802fad404/lonelygarden-bg-10.svg?v=1710517922224);
 }
