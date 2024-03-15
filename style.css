@@ -6,13 +6,19 @@ html {
 }
   
 body {
-  font-family: HK Grotesk;
+  font-family: "Zen Kaku Gothic New", "Inter", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.7;
+  color: #000000;
   background-color: #fcfcfc;
   background-image: url(https://cdn.glitch.global/f03dfeb0-8dc6-4bd6-99a3-ee0802fad404/lonelygarden-bg-10.png?v=1710510669783);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
+
+a {}
 
 div {
   width: 500px;
