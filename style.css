@@ -6,8 +6,7 @@ html {
 }
   
 body {
-  font-family: "yu-gothic-pr6n", "tt-commons-pro", sans-serif;
-  font-family: "tt-commons-pro", sans-serif;
+  font-family: "tt-commons-pro", "yu-gothic-pr6n", sans-serif;
   font-style: normal;
   line-height: 1.7;
   color: #000000;
