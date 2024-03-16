@@ -21,25 +21,21 @@ img {
   max-width: 100%;
 }
 
-.main{
-  
-}
-
 /* レイアウト */
 .align-center{
   text-align: center;
 }
 
 /* ヘッダー */
-.page-header{
+.page-header {
   padding-top: .5rem;
 }
 
-.logo{
+.logo {
   width: 50px
 }
 
-.cover{
+.cover {
   background-color: #ffffff;
   background-position: center;
   background-repeat: repeat;
@@ -47,6 +43,12 @@ img {
   height: 800px;
 }
 
-.cover-home{
+.cover-home {
   background-image: url(https://cdn.glitch.global/f03dfeb0-8dc6-4bd6-99a3-ee0802fad404/lonelygarden-bg-10.svg?v=1710517922224);
+}
+
+.text {
+  max-width: 736px;
+  padding: 0 1.5rem;
+  margin: 3rem auto 4rem;
 }
