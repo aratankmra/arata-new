@@ -52,3 +52,8 @@ img {
   padding: 0 1.5rem;
   margin: 3rem auto 4rem;
 }
+
+/* デスクトップ　レスポンシブ */
+@media (min-width: 800px) {
+  /* デスクトップ　レスポンシブ */
+}
