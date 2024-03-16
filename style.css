@@ -20,19 +20,18 @@ img {
   max-width: 100%;
 }
 
-/* レイアウト */
-.align-center{
-  text-align: center;
-}
-
 /* ヘッダー */
 .page-header {
-  padding-top: 10px;
   position: fixed;
+  float: left;
+  padding: 20px 60px; 
+  box-sizing: border-box;
+  top: 0; 
+  left: 0; 
 }
 
 .logo {
-  width: 80px
+  width: 100px
 }
 
 .cover {
