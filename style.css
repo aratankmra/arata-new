@@ -36,11 +36,10 @@ img {
 
 .cover {
   background-color: #ffffff;
-  background-position: center;
-  background-repeat: repeat;
+  background-position: center top;
+  background-repeat: no-repeat;
   background-size: contain;
   background-attachment: fixed;
-  height: 800px;
 }
 
 .cover-home {
