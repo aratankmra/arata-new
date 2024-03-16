@@ -27,7 +27,8 @@ img {
 
 /* ヘッダー */
 .page-header {
-  padding-top: .5rem;
+  padding-top: 10px;
+  position: fixed;
 }
 
 .logo {
@@ -38,12 +39,12 @@ img {
   background-color: #ffffff;
   background-position: center top;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-attachment: fixed;
 }
 
 .cover-home {
-  background-image: url(https://cdn.glitch.global/f03dfeb0-8dc6-4bd6-99a3-ee0802fad404/lonelygarden-13.png?v=1710602446530);
+  background-image: url(https://cdn.glitch.global/f03dfeb0-8dc6-4bd6-99a3-ee0802fad404/lonelygarden-10.svg?v=1710576520604);
 }
 
 .text {
