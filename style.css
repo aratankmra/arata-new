@@ -39,6 +39,7 @@ img {
   background-position: center;
   background-repeat: repeat;
   background-size: contain;
+  background-attachment: fixed;
   height: 800px;
 }
 
