@@ -34,7 +34,8 @@ img {
 }
 
 .menu{
-  width: 50px;/*80pxに画像の縮小*/
+  width: 50px;
+  position: absolute;
   right: 20; 
 }
 
