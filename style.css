@@ -33,8 +33,9 @@ img {
   left: 0; 
 }
 
-.logo {
-  width: 100px
+.menu{
+  width: 50px;/*80pxに画像の縮小*/
+  right: 20; 
 }
 
 .cover {
