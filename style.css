@@ -43,7 +43,8 @@ img {
 .about{
   width: 50px;
   position: absolute;
-  right: 200px; 
+  right:auto; 
+  top:10px;
   
 }
 
