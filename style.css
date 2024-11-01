@@ -12,7 +12,7 @@ body {
   font-size: 13px;  
   line-height: 1.7;
   color: #000000;
-  position: absolute;
+
   
 }
 
@@ -26,7 +26,7 @@ img {
 
 /* ヘッダー */
 .page-header {
-  position: sticky;
+  position: fixed;
   float: left;
   padding: 0px 20px; 
   box-sizing: border-box;
@@ -37,16 +37,9 @@ img {
 .menu{
   width: 50px;
   position: absolute;
-  right: 20px; 
+  margin-left:100px;
 }
 
-.about{
-  width: 50px;
-  position: absolute;
-  right:auto; 
-  top:10px;
-  
-}
 
 .cover {
   background-color: #FFFFFF;
