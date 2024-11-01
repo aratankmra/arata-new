@@ -30,12 +30,12 @@ header {
   position: fixed;
   float: left;
   padding: 0px 20px; 
-  box-sizing: border-box;
+/*   box-sizing: border-box; */
   top: 0; 
   left: 0; 
-  width:100vw;
-  
-  display: flex; /* 横並びに設定 */
+  width:auto;
+  hight:50px;
+
 }
 
 header p{
