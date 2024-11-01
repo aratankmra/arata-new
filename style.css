@@ -12,6 +12,7 @@ body {
   font-size: 13px;  
   line-height: 1.7;
   color: #000000;
+  
 
   
 }
@@ -25,20 +26,30 @@ img {
 }
 
 /* ヘッダー */
-.page-header {
+header {
   position: fixed;
   float: left;
   padding: 0px 20px; 
   box-sizing: border-box;
   top: 0; 
   left: 0; 
+  width:100vw;
+  
+  display: flex; /* 横並びに設定 */
+}
+
+header p{
+  width: 50px;
+  position: absolute;
+  margin-right:auto;
 }
 
 .menu{
   width: 50px;
   position: absolute;
-  margin-left:100px;
+  margin-right:auto;
 }
+
 
 
 .cover {
