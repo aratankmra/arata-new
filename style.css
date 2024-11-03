@@ -16,6 +16,7 @@ body {
 
 a {
   text-decoration: none;
+  color: rgb(0, 100, 255);
 }
 
 img {
@@ -33,7 +34,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #FFFFFF;
+  background-color:rgba(255, 255, 255, 0);
   z-index: 1000;
   box-sizing: border-box;
 }
@@ -46,7 +47,7 @@ header {
 
 .menu {
   width: 40px;
-  margin: 28px 0px 0px 0px;
+  margin: 20px 0px 0px 0px;
 }
 
 .cover {
@@ -61,8 +62,4 @@ header {
   max-width: 736px;
   padding: 0 1.5rem;
   margin: 3rem auto 4rem;
-}
-
-a {
-color:#F00;
 }
