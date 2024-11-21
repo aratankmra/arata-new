@@ -12,6 +12,7 @@ body {
   font-size: 13px;  
   line-height: 1.7;
   color: #000000;
+  background-color: #F5FFFA;
 }
 
 a {
@@ -51,7 +52,6 @@ header {
 }
 
 .cover {
-  background-color: #FFFFFF;
   background-position: center top;
   background-repeat: no-repeat;
   background-size: contain;
