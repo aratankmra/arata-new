@@ -1,10 +1,10 @@
 @charset "UTF-8";
 
-/* タブレット */
 html {
   font-size: 100%;  
 }
-  
+
+/* background-colorで背景の色を変える */
 body {
   font-family: "neue-haas-grotesk-display", "heisei-kaku-gothic-std", sans-serif;
   font-style: normal;
@@ -12,7 +12,7 @@ body {
   font-size: 13px;  
   line-height: 1.7;
   color: #000000;
-  background-color: #F5FFFA;
+  background-color: #FFFFFF;
 }
 
 a {
