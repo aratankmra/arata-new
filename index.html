@@ -197,7 +197,7 @@
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   const container = document.getElementById('circle-container');
-  const colors = ['#c8ffa0', '#c8ffa0', '#c8ffa0']; // 淡く光る3色
+  const colors = ['#c8ffa0', '#a0e4ff', '#ffd6a0', '#e0a0ff', '#ffa0a0']; // ランダムな5色
   let idle = true;
   let idleTimeout;
   let generatorInterval;
@@ -212,7 +212,9 @@ document.addEventListener('DOMContentLoaded', () => {
     circle.style.height = `${size}px`;
     circle.style.left = `${Math.random() * 100}%`;
     circle.style.top = `${Math.random() * 100}%`;
-    circle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+    const color = colors[Math.floor(Math.random() * colors.length)];
+    circle.style.backgroundColor = color;
+
 
     container.appendChild(circle);
 
