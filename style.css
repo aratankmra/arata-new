@@ -64,7 +64,7 @@ header {
   margin: 3rem auto 4rem;
 }
 
-/* 点滅サークルアニメーション */
+/* 光る丸アニメーション */
 #circle-container {
   position: fixed;
   top: 0;
@@ -79,24 +79,24 @@ header {
   position: absolute;
   border-radius: 50%;
   opacity: 0;
-  animation: fadeInOut 4s ease-in-out forwards;
+  animation: fadeInOut 6s ease-in-out forwards;
+  filter: blur(6px);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
 }
 
 @keyframes fadeInOut {
   0% {
     opacity: 0;
-    transform: scale(0.5);
-  }
-  20% {
-    opacity: 1;
     transform: scale(1);
   }
-  80% {
+  10% {
     opacity: 1;
-    transform: scale(1);
+  }
+  90% {
+    opacity: 1;
   }
   100% {
     opacity: 0;
-    transform: scale(1);
   }
 }
+
