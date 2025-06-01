@@ -197,7 +197,7 @@
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   const container = document.getElementById('circle-container');
-  const colors = ['#FFD1DC', '#C4FCEF', '#E0E7FF']; // 淡く光る3色
+  const colors = ['#c8ffa0', '#c8ffa0', '#c8ffa0']; // 淡く光る3色
   let idle = true;
   let idleTimeout;
   let generatorInterval;
@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!idle) return;
 
     const circle = document.createElement('div');
-    const size = 60; // 統一サイズ
+    const size = 30; // 統一サイズ
     circle.classList.add('circle');
     circle.style.width = `${size}px`;
     circle.style.height = `${size}px`;
