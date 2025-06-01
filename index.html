@@ -189,5 +189,68 @@
     </div>
 
     <footer></footer>
+
+    <!-- 点滅サークルアニメーション -->
+    <div id="circle-container"></div>
+
+    <!-- 点滅サークルアニメーション用スクリプト -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const container = document.getElementById('circle-container');
+        const colors = ['#FF6B6B', '#4ECDC4', '#FFD93D']; // お好きな3色
+        let idle = true;
+        let idleTimeout;
+        let generatorInterval;
+      
+        // ランダムな丸を生成
+        function createCircle() {
+          if (!idle) return;
+      
+          const circle = document.createElement('div');
+          const size = Math.random() * 60 + 20; // 20〜80px
+      
+          circle.classList.add('circle');
+          circle.style.width = `${size}px`;
+          circle.style.height = `${size}px`;
+          circle.style.left = `${Math.random() * 100}%`;
+          circle.style.top = `${Math.random() * 100}%`;
+          circle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+          circle.style.opacity = 0;
+      
+          container.appendChild(circle);
+      
+          // アニメーション終了後に削除
+          setTimeout(() => {
+            container.removeChild(circle);
+          }, 4000);
+        }
+      
+        // ユーザーが操作したら停止
+        function resetIdleTimer() {
+          idle = false;
+          clearInterval(generatorInterval);
+          container.innerHTML = '';
+      
+          clearTimeout(idleTimeout);
+          idleTimeout = setTimeout(() => {
+            idle = true;
+            startGenerating();
+          }, 5000); // 5秒操作なしで再開
+        }
+      
+        function startGenerating() {
+          generatorInterval = setInterval(createCircle, 600);
+        }
+      
+        // イベントリスナーを登録
+        ['mousemove', 'mousedown', 'keydown', 'touchstart', 'scroll'].forEach(event => {
+          window.addEventListener(event, resetIdleTimer);
+        });
+      
+        // 初期起動
+        startGenerating();
+      });
+      </script>
+       
   </body>
 </html>
