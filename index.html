@@ -218,7 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setTimeout(() => {
       container.removeChild(circle);
-    }, 6000); // CSSと一致させる
+    }, 4000); // CSSと同じ値に合わせる（ms 単位）
   }
 
   function resetIdleTimer() {
@@ -230,11 +230,11 @@ document.addEventListener('DOMContentLoaded', () => {
     idleTimeout = setTimeout(() => {
       idle = true;
       startGenerating();
-    }, 5000); // 5秒間操作がなければ再開
+    }, 3000); // 3秒間操作がなければ再開
   }
 
   function startGenerating() {
-    generatorInterval = setInterval(createCircle, 700); // 出現間隔
+    generatorInterval = setInterval(createCircle, 500); // 出現間隔
   }
 
   ['mousemove', 'mousedown', 'keydown', 'touchstart', 'scroll'].forEach(event => {
