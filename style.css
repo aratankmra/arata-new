@@ -64,6 +64,20 @@ header {
   margin: 3rem auto 4rem;
 }
 
+.footer {
+  padding: 60px 40px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.footer-logo {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
 /* 光る丸アニメーション */
 #circle-container {
   position: fixed;
