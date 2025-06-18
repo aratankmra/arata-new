@@ -76,6 +76,7 @@ header {
   height: auto;
   display: block;
   margin: 0 auto;
+  fill: #CCCCCC; /* 色変更 */
 }
 
 @media (max-width: 768px) {
