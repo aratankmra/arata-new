@@ -125,9 +125,9 @@ header {
   position: absolute;
   border-radius: 50%;
   opacity: 0;
-  animation: sparkInOut 1.5s ease-out forwards;
-  pointer-events: none;
-  z-index: 9999;
+  animation: sparkInOut 1.5s ease-out forwards; /* 表示時間 */
+  filter: blur(2px); /* ← ぼやけの強さ */
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.4); /* ← 外ににじむ光 */
 }
 
 @keyframes sparkInOut {
