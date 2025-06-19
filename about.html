@@ -173,16 +173,13 @@
       if (!idle) return;
 
       const circle = document.createElement('div');
-      const size = 100 + Math.random() * 200; // スパーク感：大きめ
-      const blur = 10 + Math.random() * 20;
-
+      const size = 20; // 丸の大きさ（統一）
       circle.classList.add('circle');
       circle.style.width = `${size}px`;
       circle.style.height = `${size}px`;
       circle.style.left = `${Math.random() * 100}%`;
       circle.style.top = `${Math.random() * 100}%`;
       circle.style.backgroundColor = color;
-      circle.style.filter = `blur(${blur}px) brightness(1.5)`;
 
       container.appendChild(circle);
 
