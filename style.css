@@ -59,6 +59,7 @@ header {
   color: #000;
   cursor: default;
   white-space: nowrap;
+  line-height: 1.5; /* 行間を調整 */
 }
 
 #menu-toggle {
