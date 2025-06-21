@@ -59,6 +59,8 @@ header {
   color: #000;
   cursor: default;
   white-space: nowrap;
+  display: inline-block;
+  padding-bottom: 16px; /* ← 増やしてホバー途切れを防止 */
 }
 
 #menu-toggle {
@@ -69,6 +71,7 @@ header {
   pointer-events: auto;
 }
 
+/* プルダウンメニュー */
 .menu-links {
   position: absolute;
   top: 100%;
@@ -78,6 +81,7 @@ header {
   line-height: 2;
   z-index: 9999;
   margin-top: 9px; /* ← 追加：顔文字との距離 */
+  padding-top: 4px; /* ← クリックしやすいようにpadding追加 */
 }
 
 .menu-links a {
@@ -85,12 +89,14 @@ header {
   text-decoration: none;
   font-size: 13px;
   display: block;
+  padding: 4px 0; /* 行間の統一感を出す */
 }
 
 .menu-links a:hover {
   text-decoration: underline;
 }
 
+/* 表示用クラス */
 .menu-links.active {
   display: block;
 }
