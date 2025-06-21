@@ -193,3 +193,40 @@ header {
 .menu-list.show {
   display: block;
 }
+
+.menu {
+  /* ヘッダーと揃えるなら以下のマージンが必要 */
+  margin-left: 20px;
+}
+
+.menu-links {
+  position: absolute;
+  top: 50px;
+  left: 20px; /* ← ここがポイント */
+  font-size: 13px;
+  font-family: "neue-haas-grotesk-display", "heisei-kaku-gothic-std", sans-serif;
+  font-weight: 100;
+  line-height: 2;
+  background: none;
+  border: none;
+  color: #000;
+  display: none;
+  z-index: 9999;
+}
+
+/* 表示時に切り替え */
+.menu-links.active {
+  display: block;
+}
+
+/* メニュー内のリンク */
+.menu-links a {
+  text-decoration: none;
+  color: #000; /* 黒で統一 */
+  display: block;
+}
+
+/* hover時も同様にシンプルに */
+.menu-links a:hover {
+  text-decoration: underline;
+}

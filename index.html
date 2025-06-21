@@ -88,13 +88,13 @@
         </div>
 
         <div class="menu">
-          <button class="menu-button" id="menuToggle">( ᴗ _ᴗ )</button>
-          <div class="menu-list" id="menuList">
+          <p id="menu-toggle" style="cursor: pointer;">（ ᴗ _ᴗ ）</p>
+          <div class="menu-links" id="menu-links">
             <a href="journal.html">Journal</a>
             <a href="works.html">Works</a>
             <a href="about.html">About</a>
           </div>
-        </div>        
+        </div>
         
       </header>
 
@@ -238,17 +238,22 @@
   </script>
   
   <!-- メニュー切り替えスクリプト -->
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const toggle = document.getElementById('menuToggle');
-    const menuList = document.getElementById('menuList');
-    
-    toggle.addEventListener('click', () => {
-      menuList.classList.toggle('show');
-      toggle.textContent = menuList.classList.contains('show') ? '( ･ _･ )' : '( ᴗ _ᴗ )';
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.getElementById('menu-toggle');
+      const links = document.getElementById('menu-links');
+  
+      toggle.addEventListener('click', () => {
+        links.classList.toggle('active');
+        // 表示切り替え：顔文字を変更
+        if (toggle.textContent === '（ ᴗ _ᴗ ）') {
+          toggle.textContent = '（ ･ _･ ）';
+        } else {
+          toggle.textContent = '（ ᴗ _ᴗ ）';
+        }
+      });
     });
-  });
-</script>
+  </script>  
 
   </body>
 </html>
