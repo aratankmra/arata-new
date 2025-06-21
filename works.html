@@ -2,7 +2,7 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
-    <title>About - arata（新）</title>
+    <title>Works - arata（新）</title>
     <meta
       name="description"
       content="外界から守られていながら、完璧な内部空間ではないという特徴を有した、穏やかな外部空間"
@@ -80,14 +80,11 @@
     <script src="/script.js" defer></script>
   </head>
 
-  <body class="about-page">
+  <body>
     <div class="cover cover-home">
       <header>
         <div class="title">
-          <p>
-            arata（新）
-            <a href="index.html"> </a>
-          </p>
+          <p>arata（新）</p>
         </div>
 
         <div class="menu">
@@ -101,116 +98,11 @@
           </div>
         </div>
 
-      </header>
+    </header>
 
-      <div class="text">
-        <p>
-          <br />
-          Graphic Designer ⭐️
-          <br />
-          <br />
-          1998　Born in Morioka, Iwate, Japan
-          <br />
-          2017-2021　Science of Design, Musashino Art University
-          <br />
-          2021-　Ken Okamoto Design Office
-          <br />
-          <br />
-          .　⋆⁺⋆｡🦋₊⋆°⋆
-          <br />
-          　　／l、
-          <br />
-          ﾞ（ﾟ､ ｡ ７
-          <br />
-          　l、ﾞ ~ヽ
-          <br />
-          　じしf_, )ノ
-          <br />
-          <br />
-          Anything can come true here, my planet.
-        </p>
-        <br />
-        <img
-          src="https://cdn.glitch.global/f03dfeb0-8dc6-4bd6-99a3-ee0802fad404/ERZ_0127tif.jpg?v=1731545170871"
-          alt="ポートレート写真"
-        />
-      </div>
+    <div class="text">
+      <h1>Works</h1>
+      <p>準備中</p>
     </div>
-
-     <!-- 光る丸のコンテナ -->
-<div id="circle-container"></div>
-
-<!-- 光る丸アニメーションスクリプト -->
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    // aboutページでなければ終了
-    if (!document.body.classList.contains('about-page')) return;
-
-    const container = document.getElementById('circle-container');
-    const color = '#c8ffa0'; // 光る丸の色
-    let idle = true;
-    let idleTimeout;
-    let generatorInterval;
-
-    function createCircle() {
-      if (!idle) return;
-
-      const circle = document.createElement('div');
-      const size = 20; // 丸の大きさ（統一）
-      circle.classList.add('circle');
-      circle.style.width = `${size}px`;
-      circle.style.height = `${size}px`;
-      circle.style.left = `${Math.random() * 100}%`;
-      circle.style.top = `${Math.random() * 100}%`;
-      circle.style.backgroundColor = color;
-
-      container.appendChild(circle);
-
-      setTimeout(() => {
-        container.removeChild(circle);
-      }, 1500); // 短めでスパーク感
-    }
-
-    function resetIdleTimer() {
-      idle = false;
-      clearInterval(generatorInterval);
-      container.innerHTML = '';
-      clearTimeout(idleTimeout);
-      idleTimeout = setTimeout(() => {
-        idle = true;
-        startGenerating();
-      }, 3000);
-    }
-
-    function startGenerating() {
-      generatorInterval = setInterval(createCircle, 200); // 高速に生成
-    }
-
-    ['mousemove', 'mousedown', 'keydown', 'touchstart', 'scroll'].forEach(event => {
-      window.addEventListener(event, resetIdleTimer);
-    });
-
-    startGenerating();
-  });
-</script>
-
-  <!-- メニュー切り替えスクリプト -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const toggle = document.getElementById('menu-toggle');
-      const links = document.getElementById('menu-links');
-  
-      toggle.addEventListener('click', () => {
-        links.classList.toggle('active');
-        // 表示切り替え：顔文字を変更
-        if (toggle.textContent === '（ ᴗ _ᴗ ）') {
-          toggle.textContent = '（ ･ _･ ）';
-        } else {
-          toggle.textContent = '（ ᴗ _ᴗ ）';
-        }
-      });
-    });
-  </script>  
-
   </body>
-</html>
+  </html>
