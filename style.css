@@ -66,10 +66,9 @@ header {
   padding: 0;
   line-height: 1;
   white-space: nowrap;
-  pointer-events: none; /* クリック不可に */
+  pointer-events: auto;
 }
 
-/* メニューのリンク全体 */
 .menu-links {
   position: absolute;
   top: 100%;
@@ -80,7 +79,6 @@ header {
   z-index: 9999;
 }
 
-/* 各リンクスタイル */
 .menu-links a {
   color: #000;
   text-decoration: none;
@@ -92,30 +90,8 @@ header {
   text-decoration: underline;
 }
 
-/* ホバー時の顔文字切替とリンク表示 */
-.menu:hover #menu-toggle::before {
-  content: "（ ･ _･ ）";
-}
-
-.menu:hover #menu-toggle {
-  visibility: hidden;
-}
-
-.menu:hover .menu-links {
+.menu-links.active {
   display: block;
-}
-
-.menu p#menu-toggle {
-  font-size: 13px;
-  font-family: "neue-haas-grotesk-display", "heisei-kaku-gothic-std", sans-serif;
-  font-weight: 100;
-  color: #000;
-  line-height: 1;
-  margin: 0;
-  padding: 0;
-  white-space: nowrap;
-  display: inline-block;
-  pointer-events: auto; /* 念のため明示 */
 }
 /* ▲ メニュー関連ここまで ▲ */
 
