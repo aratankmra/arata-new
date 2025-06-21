@@ -226,7 +226,3 @@ header {
   pointer-events: none;
   z-index: 9998;
 }
-
-p#menu-toggle {
-  background: rgba(255, 0, 0, 0.1); /* テスト用背景 */
-}
