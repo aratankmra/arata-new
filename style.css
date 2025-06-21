@@ -80,7 +80,6 @@ header {
   background: none;
   line-height: 2;
   z-index: 9999;
-  margin-top: 9px; /* ← 追加：顔文字との距離 */
   padding-top: 4px; /* ← クリックしやすいようにpadding追加 */
 }
 
