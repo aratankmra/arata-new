@@ -75,15 +75,18 @@ header {
   align-items: center;
   height: 50px; /* ← headerの高さに合わせる */
   box-sizing: border-box;
-  padding-bottom: 16px; /* hover対策の余白 */
+  padding-bottom: 0; /* ← 16pxだとズレる原因に。hover切れ対策は別で */
 }
 
 #menu-toggle {
   margin: 0;
   padding: 0;
-  line-height: 1;
+  line-height: normal;
   white-space: nowrap;
   pointer-events: auto;
+  display: flex;
+  align-items: center;
+  height: 50px; /* headerと揃える */
 }
 
 /* プルダウンメニュー */
