@@ -105,5 +105,81 @@
       <p>準備中 Coming Soon...</p>
 
     </div>
+
+     <!-- 光る丸のコンテナ -->
+<div id="circle-container"></div>
+
+<!-- 光る丸アニメーションスクリプト -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // aboutページでなければ終了
+    if (!document.body.classList.contains('about-page')) return;
+
+    const container = document.getElementById('circle-container');
+    const color = '#c8ffa0'; // 光る丸の色
+    let idle = true;
+    let idleTimeout;
+    let generatorInterval;
+
+    function createCircle() {
+      if (!idle) return;
+
+      const circle = document.createElement('div');
+      const size = 20; // 丸の大きさ（統一）
+      circle.classList.add('circle');
+      circle.style.width = `${size}px`;
+      circle.style.height = `${size}px`;
+      circle.style.left = `${Math.random() * 100}%`;
+      circle.style.top = `${Math.random() * 100}%`;
+      circle.style.backgroundColor = color;
+
+      container.appendChild(circle);
+
+      setTimeout(() => {
+        container.removeChild(circle);
+      }, 1500); // 短めでスパーク感
+    }
+
+    function resetIdleTimer() {
+      idle = false;
+      clearInterval(generatorInterval);
+      container.innerHTML = '';
+      clearTimeout(idleTimeout);
+      idleTimeout = setTimeout(() => {
+        idle = true;
+        startGenerating();
+      }, 3000);
+    }
+
+    function startGenerating() {
+      generatorInterval = setInterval(createCircle, 200); // 高速に生成
+    }
+
+    ['mousemove', 'mousedown', 'keydown', 'touchstart', 'scroll'].forEach(event => {
+      window.addEventListener(event, resetIdleTimer);
+    });
+
+    startGenerating();
+  });
+</script>
+
+  <!-- メニュー切り替えスクリプト -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.getElementById('menu-toggle');
+      const links = document.getElementById('menu-links');
+  
+      toggle.addEventListener('click', () => {
+        links.classList.toggle('active');
+        // 表示切り替え：顔文字を変更
+        if (toggle.textContent === '（ ᴗ _ᴗ ）') {
+          toggle.textContent = '（ ･ _･ ）';
+        } else {
+          toggle.textContent = '（ ᴗ _ᴗ ）';
+        }
+      });
+    });
+  </script>  
+  
   </body>
   </html>
