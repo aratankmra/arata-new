@@ -159,3 +159,37 @@ header {
   z-index: 9998;
 }
 
+.menu-button {
+  font-family: "neue-haas-grotesk-display", "heisei-kaku-gothic-std", sans-serif;
+  font-size: 13px;
+  font-weight: 100;
+  background: none;
+  border: none;
+  color: #000;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.menu-list {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 60px;
+  background-color: #fff;
+  padding: 10px 15px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  z-index: 999;
+}
+
+.menu-list a {
+  display: block;
+  margin: 5px 0;
+  font-size: 13px;
+  color: rgb(0, 100, 255);
+}
+
+.menu-list.show {
+  display: block;
+}
