@@ -77,7 +77,7 @@ header {
   background: none;
   line-height: 2;
   z-index: 9999;
-  margin-top: 8px; /* ← 追加：顔文字との距離 */
+  margin-top: 9px; /* ← 追加：顔文字との距離 */
 }
 
 .menu-links a {
