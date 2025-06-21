@@ -31,27 +31,80 @@ header {
   left: 0;
   width: 100%;
   height: 50px;
-  padding: 0px 20px;
+  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color:rgba(255, 255, 255, 0);
+  background-color: rgba(255, 255, 255, 0);
   z-index: 1000;
   box-sizing: border-box;
 }
 
-.title {
-  flex: 1; /* 左側に余白を持たせる */
-
-  align-items: center;
+.title a {
+  font-size: 13px;
+  color: #000;
+  text-decoration: none;
+  font-family: "neue-haas-grotesk-display", "heisei-kaku-gothic-std", sans-serif;
+  font-weight: 100;
+  white-space: nowrap;
 }
 
+/* ▼ メニュー関連 ▼ */
 .menu {
   position: relative;
-  margin-left: 20px;
-  display: flex;
-  align-items: center;
+  margin-right: 20px;
+  font-size: 13px;
+  font-family: "neue-haas-grotesk-display", "heisei-kaku-gothic-std", sans-serif;
+  font-weight: 100;
+  color: #000;
+  cursor: default;
+  white-space: nowrap;
 }
+
+#menu-toggle {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  white-space: nowrap;
+  pointer-events: none; /* クリック不可に */
+}
+
+/* メニューのリンク全体 */
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  display: none;
+  background: none;
+  line-height: 2;
+  z-index: 9999;
+}
+
+/* 各リンクスタイル */
+.menu-links a {
+  color: #000;
+  text-decoration: none;
+  font-size: 13px;
+  display: block;
+}
+
+.menu-links a:hover {
+  text-decoration: underline;
+}
+
+/* ホバー時の顔文字切替とリンク表示 */
+.menu:hover #menu-toggle::before {
+  content: "（ ･ _･ ）";
+}
+
+.menu:hover #menu-toggle {
+  visibility: hidden;
+}
+
+.menu:hover .menu-links {
+  display: block;
+}
+/* ▲ メニュー関連ここまで ▲ */
 
 .cover {
   background-position: center top;
@@ -159,79 +212,4 @@ header {
   height: 100%;
   pointer-events: none;
   z-index: 9998;
-}
-
-.menu-button {
-  font-size: 13px;
-  font-family: "neue-haas-grotesk-display", "heisei-kaku-gothic-std", sans-serif;
-  font-weight: 100;
-  background: none;
-  border: none;
-  color: #000;
-  cursor: pointer;
-  white-space: nowrap;       /* ← 改行を防止 */
-  display: inline-block;     /* ← blockにしない */
-  padding: 0;
-  margin: 0;
-  line-height: 1;
-}
-
-
-.menu-list {
-  display: none;
-  position: absolute;
-  right: 20px;
-  top: 60px;
-  background-color: #fff;
-  padding: 10px 15px;
-  border-radius: 6px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  z-index: 999;
-}
-
-.menu-list a {
-  display: block;
-  margin: 5px 0;
-  font-size: 13px;
-  color: rgb(0, 100, 255);
-}
-
-.menu-list.show {
-  display: block;
-}
-
-.menu {
-  /* ヘッダーと揃えるなら以下のマージンが必要 */
-  margin-left: 20px;
-}
-
-.menu-links {
-  position: absolute;
-  top: 100%;
-  left: 0; /* ← メニューの左端に揃うようになる */
-  display: none;
-  background: none;
-  font-size: 13px;
-  line-height: 2;
-  color: #000;
-  white-space: nowrap;
-  z-index: 9999;
-}
-
-
-/* 表示時に切り替え */
-.menu-links.active {
-  display: block;
-}
-
-/* メニュー内のリンク */
-.menu-links a {
-  text-decoration: none;
-  color: #000; /* 黒で統一 */
-  display: block;
-}
-
-/* hover時も同様にシンプルに */
-.menu-links a:hover {
-  text-decoration: underline;
 }
