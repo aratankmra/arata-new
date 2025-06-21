@@ -91,27 +91,14 @@
         </div>
 
         <div class="menu">
-          <a href="index.html">
-            <svg
-              id="rayer2"
-              xmlns="http://www.w3.org/2000/svg"
-              viewbox="0 0 40 27.62"
-            >
-              <defs>
-                <style>
-                  .cls-1 {
-                    fill: rgb(0, 80, 255, 100);
-                    stroke-width: 0px;
-                  }
-                </style>
-              </defs>
-              <path
-                class="cls-1"
-                d="M32.73,26.84H7.27c-1.71,0-3.09-1.38-3.09-3.09v-6.86h-.09c-1.38,0-2.59-.91-2.97-2.24-.38-1.32.16-2.74,1.33-3.47L18.36,1.25c1-.63,2.27-.63,3.27,0l15.91,9.94c1.17.73,1.71,2.15,1.33,3.47-.38,1.32-1.59,2.24-2.97,2.24h-.09v6.86c0,1.71-1.38,3.09-3.09,3.09ZM10.36,20.67h19.28v-6.86c0-.09,0-.18.01-.27l-9.65-6.03-9.65,6.03c0,.09.01.18.01.27v6.86Z"
-              />
-            </svg>
-          </a>
+          <p id="menu-toggle" style="cursor: pointer;">（ ᴗ _ᴗ ）</p>
+          <div class="menu-links" id="menu-links">
+            <a href="index.html">Journal</a>
+            <a href="works.html">Works</a>
+            <a href="about.html">About</a>
+          </div>
         </div>
+
       </header>
 
       <div class="text">
@@ -210,6 +197,24 @@
     startGenerating();
   });
 </script>
+
+  <!-- メニュー切り替えスクリプト -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.getElementById('menu-toggle');
+      const links = document.getElementById('menu-links');
+  
+      toggle.addEventListener('click', () => {
+        links.classList.toggle('active');
+        // 表示切り替え：顔文字を変更
+        if (toggle.textContent === '（ ᴗ _ᴗ ）') {
+          toggle.textContent = '（ ･ _･ ）';
+        } else {
+          toggle.textContent = '（ ᴗ _ᴗ ）';
+        }
+      });
+    });
+  </script>  
 
   </body>
 </html>
