@@ -40,13 +40,16 @@ header {
   box-sizing: border-box;
 }
 
-.title a {
+.title {
   font-size: 13px;
   color: #000;
   text-decoration: none;
   font-family: "neue-haas-grotesk-display", "heisei-kaku-gothic-std", sans-serif;
   font-weight: 100;
   white-space: nowrap;
+  flex: 1;
+  display: flex;
+  align-items: center;
 }
 
 /* ▼ メニュー関連 ▼ */
@@ -59,8 +62,9 @@ header {
   color: #000;
   cursor: default;
   white-space: nowrap;
-  display: inline-block;
-  padding-bottom: 16px; /* ← 増やしてホバー途切れを防止 */
+  display: flex; /* ← 追加：中の要素をflex配置 */
+  align-items: center; /* ← 追加：縦中央揃え */
+  padding-bottom: 16px; /* ← hover対策の余白 */
 }
 
 #menu-toggle {
