@@ -254,10 +254,8 @@
     if (isTouchDevice) {
       // モバイルの場合：クリックで開閉
       toggle.addEventListener('click', () => {
-        links.classList.toggle('active');
-        toggle.textContent = links.classList.contains('active')
-          ? '（ ･ _･ ）'
-          : '（ ᴗ _ᴗ ）';
+        const active = links.classList.toggle('active');
+        toggle.textContent = active ? '（ ･ _･ ）' : '（ ᴗ _ᴗ ）';
       });
     } else {
       // PCの場合：マウスオーバーで表示・顔文字変更

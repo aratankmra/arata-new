@@ -104,6 +104,19 @@ header {
 .menu:hover .menu-links {
   display: block;
 }
+
+.menu p#menu-toggle {
+  font-size: 13px;
+  font-family: "neue-haas-grotesk-display", "heisei-kaku-gothic-std", sans-serif;
+  font-weight: 100;
+  color: #000;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  display: inline-block;
+  pointer-events: auto; /* 念のため明示 */
+}
 /* ▲ メニュー関連ここまで ▲ */
 
 .cover {
