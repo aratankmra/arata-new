@@ -49,6 +49,8 @@ header {
 .menu {
   width: 40px;
   margin: 20px 0px 0px 0px;
+  position: relative; /* ← これが大事 */
+  margin-left: 20px;  /* タイトルと揃える */
 }
 
 .cover {
@@ -169,6 +171,7 @@ header {
   cursor: pointer;
   padding: 0;
   line-height: 1;
+  white-space: nowrap; /* ← 改行を防止 */
 }
 
 .menu-list {
@@ -201,18 +204,17 @@ header {
 
 .menu-links {
   position: absolute;
-  top: 50px;
-  left: 20px; /* ← ここがポイント */
-  font-size: 13px;
-  font-family: "neue-haas-grotesk-display", "heisei-kaku-gothic-std", sans-serif;
-  font-weight: 100;
-  line-height: 2;
-  background: none;
-  border: none;
-  color: #000;
+  top: 100%;
+  left: 0; /* ← メニューの左端に揃うようになる */
   display: none;
+  background: none;
+  font-size: 13px;
+  line-height: 2;
+  color: #000;
+  white-space: nowrap;
   z-index: 9999;
 }
+
 
 /* 表示時に切り替え */
 .menu-links.active {
