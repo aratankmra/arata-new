@@ -2,7 +2,7 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
-    <title>Works - arata（新）</title>
+    <title>arata（新）</title>
     <meta
       name="description"
       content="外界から守られていながら、完璧な内部空間ではないという特徴を有した、穏やかな外部空間"
@@ -81,85 +81,45 @@
     <div class="cover cover-home">
       <header>
         <div class="title">
-            <a href="index.html">arata（新）</a>
+          <a href="index.html">arata（新）</a>
+        </div>
+      
+        <div class="menu">
+          <p id="menu-toggle">（ ᴗ _ᴗ ）</p>
+          <div class="menu-links" id="menu-links">
+            <a href="about.html">About</a>
+            <a href="index.html">Journal</a>
+            <a href="works.html">Works</a>
+            <a href="https://www.instagram.com/arata.jp/" target="_blank">IG</a>
+            <a href="playlist.html">♩</a>
           </div>
+        </div>
         
-          <div class="menu">
-            <p id="menu-toggle">（ ᴗ _ᴗ ）</p>
-            <div class="menu-links" id="menu-links">
-              <a href="about.html">About</a>
-              <a href="index.html">Journal</a>
-              <a href="works.html">Works</a>
-              <a href="https://www.instagram.com/arata.jp/" target="_blank">IG</a>
-              <a href="playlist.html">♩</a>
-            </div>
-          </div>
+      </header>
 
-    </header>
-
-    <div class="text">
-      <p><br />準備中 Coming Soon...</p>
-
-    </div>
-
-     <!-- 光る丸のコンテナ -->
-<div id="circle-container"></div>
-
-<!-- 光る丸アニメーションスクリプト -->
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    // aboutページでなければ終了
-    if (!document.body.classList.contains('about-page')) return;
-
-    const container = document.getElementById('circle-container');
-    const color = '#c8ffa0'; // 光る丸の色
-    let idle = true;
-    let idleTimeout;
-    let generatorInterval;
-
-    function createCircle() {
-      if (!idle) return;
-
-      const circle = document.createElement('div');
-      const size = 20; // 丸の大きさ（統一）
-      circle.classList.add('circle');
-      circle.style.width = `${size}px`;
-      circle.style.height = `${size}px`;
-      circle.style.left = `${Math.random() * 100}%`;
-      circle.style.top = `${Math.random() * 100}%`;
-      circle.style.backgroundColor = color;
-
-      container.appendChild(circle);
-
-      setTimeout(() => {
-        container.removeChild(circle);
-      }, 1500); // 短めでスパーク感
-    }
-
-    function resetIdleTimer() {
-      idle = false;
-      clearInterval(generatorInterval);
-      container.innerHTML = '';
-      clearTimeout(idleTimeout);
-      idleTimeout = setTimeout(() => {
-        idle = true;
-        startGenerating();
-      }, 3000);
-    }
-
-    function startGenerating() {
-      generatorInterval = setInterval(createCircle, 200); // 高速に生成
-    }
-
-    ['mousemove', 'mousedown', 'keydown', 'touchstart', 'scroll'].forEach(event => {
-      window.addEventListener(event, resetIdleTimer);
-    });
-
-    startGenerating();
-  });
-</script>
-
-<!-- メニュー切り替えスクリプト（マウスオーバー） -->
+      <div class="text">
+        <!-- 投稿②（新しい） -->
+        <iframe 
+          src="https://www.threads.net/@arata.jp/post/C7otrSaSW7F" 
+          width="100%" 
+          height="600" 
+          style="border: none;" 
+          loading="lazy"
+          allowfullscreen>
+        </iframe>
+      
+        <!-- 投稿①（古い） -->
+        <iframe 
+          src="https://www.threads.net/@arata.jp/post/C6WOdqxSxo9" 
+          width="100%" 
+          height="600" 
+          style="border: none;" 
+          loading="lazy"
+          allowfullscreen>
+        </iframe>
+      </div>
+      
+      <!-- メニュー切り替えスクリプト（マウスオーバー） -->
 <script>
     document.addEventListener('DOMContentLoaded', () => {
       const toggle = document.getElementById('menu-toggle');
@@ -188,7 +148,7 @@
         });
       }
     });
-  </script> 
-
-  </body>
+  </script>
+  
+    </body>
   </html>
