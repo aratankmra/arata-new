@@ -47,10 +47,10 @@ header {
 }
 
 .menu {
-  width: 40px;
-  margin: 20px 0px 0px 0px;
-  position: relative; /* ← これが大事 */
-  margin-left: 20px;  /* タイトルと揃える */
+  position: relative;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .cover {
@@ -162,17 +162,20 @@ header {
 }
 
 .menu-button {
-  font-family: "neue-haas-grotesk-display", "heisei-kaku-gothic-std", sans-serif;
   font-size: 13px;
+  font-family: "neue-haas-grotesk-display", "heisei-kaku-gothic-std", sans-serif;
   font-weight: 100;
   background: none;
   border: none;
   color: #000;
   cursor: pointer;
+  white-space: nowrap;       /* ← 改行を防止 */
+  display: inline-block;     /* ← blockにしない */
   padding: 0;
+  margin: 0;
   line-height: 1;
-  white-space: nowrap; /* ← 改行を防止 */
 }
+
 
 .menu-list {
   display: none;
