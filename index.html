@@ -184,60 +184,60 @@
       <img src="/link/web/footer-logo_250617.svg" alt="arata footer-logo" class="footer-logo" />
      </footer>
 
-    <!-- 光る丸のコンテナ -->
+<!-- ピクセルのコンテナ -->
 <div id="circle-container"></div>
 
 <!-- 光る丸アニメーションスクリプト -->
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('circle-container');
-    const colors = ['#ff4fa3', '#f9f871', '#ff1744', '#a0e4ff', '#c8ffa0']; // 5色のバリエーション
-    let currentColor = '#c8ffa0'; // 表示中に使う色
+    const colors = ['#2196f3', '#f9f871', '#ff4fa3']; // 青・黄・ピンク
+    let currentColor = '#2196f3';
     let idle = true;
     let idleTimeout;
     let generatorInterval;
-  
-    function createCircle() {
+
+    function createPixel() {
       if (!idle) return;
   
-      const circle = document.createElement('div');
-      const size = 20; // 丸の大きさ（統一）
-      circle.classList.add('circle');
-      circle.style.width = `${size}px`;
-      circle.style.height = `${size}px`;
-      circle.style.left = `${Math.random() * 100}%`;
-      circle.style.top = `${Math.random() * 100}%`;
+      const pixel = document.createElement('div');
+      const size = 8; // 小さな正方形
+      pixel.classList.add('circle');
+      pixel.style.width = `${size}px`;
+      pixel.style.height = `${size}px`;
+      pixel.style.left = `${Math.random() * 100}%`;
+      pixel.style.top = `${Math.random() * 100}%`;
       circle.style.backgroundColor = currentColor; // 毎回同じ色で出現
   
-      container.appendChild(circle);
-  
+      container.appendChild(pixel);
+
       setTimeout(() => {
-        container.removeChild(circle);
-      }, 4000); // 丸の表示時間（ms）
+        container.removeChild(pixel);
+      }, 4000); // ピクセルの表示時間（ms）
     }
   
     function resetIdleTimer() {
       idle = false;
       clearInterval(generatorInterval);
       container.innerHTML = '';
-  
+
       clearTimeout(idleTimeout);
       idleTimeout = setTimeout(() => {
         idle = true;
         startGenerating();
-      }, 3000); // 3秒間操作がなければ再開
+      }, 5000); // 5秒間操作がなければ再開
     }
   
     function startGenerating() {
       currentColor = colors[Math.floor(Math.random() * colors.length)]; // 毎回1色だけ選ぶ
-      generatorInterval = setInterval(createCircle, 500); // 出現間隔
+      generatorInterval = setInterval(createPixel, 100); // 出現間隔
     }
   
     // ユーザー操作でリセットされるイベント
     ['mousemove', 'mousedown', 'keydown', 'touchstart', 'scroll'].forEach(event => {
       window.addEventListener(event, resetIdleTimer);
     });
-  
+
     startGenerating(); // 初回スタート
   });
   </script>
