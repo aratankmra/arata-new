@@ -59,6 +59,7 @@ header {
   font-family: "neue-haas-grotesk-display", "heisei-kaku-gothic-std", sans-serif;
   font-weight: 100;
   white-space: nowrap;
+  letter-spacing: 0.08em; /* 例: 文字サイズの8% */
 }
 
 /* ▼ メニュー関連 ▼ */
@@ -76,6 +77,7 @@ header {
   height: 50px; /* ← headerの高さに合わせる */
   box-sizing: border-box;
   padding-bottom: 0; /* ← 16pxだとズレる原因に。hover切れ対策は別で */
+  letter-spacing: 0.08em; /* 例: 文字サイズの8% */
 }
 
 #menu-toggle {
@@ -130,7 +132,7 @@ header {
   max-width: 736px;
   padding: 0 1.5rem;
   margin: 3rem auto 4rem;
-  letter-spacing: 0.1em; /* 例: 文字サイズの10% */
+  letter-spacing: 0.08em; /* 例: 文字サイズの8% */
 }
 
 .footer {
