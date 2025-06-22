@@ -97,6 +97,12 @@
 
       </header>
 
+      <div class="work-description" id="work-description">
+        <p id="work-title"></p>
+        <p id="work-caption"></p>
+      </div>
+      
+
 <!-- 説明表示用（PC時） -->
 <div class="work-description" id="work-description"></div>
 
@@ -104,12 +110,12 @@
 <section class="work-grid">
 
   <!-- 投稿2 -->
-  <div class="work-image-wrapper" data-title="Shinin d(^_^o)" data-date="2024年11月1-3日">
+  <div class="work-image-wrapper" data-title="Shinin d(^_^o)" data-caption="2024年11月1-3日">
     <img src="/link/Works/Shinin d(^_^o)_poster_fix.png" alt="Shinin d(^_^o)">
   </div>
 
   <!-- 投稿1 -->
-  <div class="work-image-wrapper" data-title="準備中 Coming soon…" data-date="2025年6月22日">
+  <div class="work-image-wrapper" data-title="準備中 Coming soon…" data-caption="2025年6月22日">
     <img src="/link/Works/uma.png" alt="準備中">
     <img src="/link/Works/uma_aka.png" alt="準備中" style="display: none;">
   </div>
@@ -202,56 +208,66 @@
     });
   </script> 
 
-<!-- 画像のスクロールスクリプト -->  
-<script>
+<!-- 画像のスクロールスクリプト -->
+  <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const wrappers = document.querySelectorAll('.work-image-wrapper');
-      const description = document.getElementById('work-description');
-  
+      const wrappers = document.querySelectorAll('.work-wrapper');
+      const descBox = document.getElementById('work-description');
+      const titleEl = document.getElementById('work-title');
+      const captionEl = document.getElementById('work-caption');
+    
       wrappers.forEach(wrapper => {
         const images = wrapper.querySelectorAll('img');
         let currentIndex = 0;
-  
-        // 自動切り替え
+    
+        // 画像の初期表示設定
+        images.forEach((img, i) => {
+          img.style.display = i === 0 ? 'block' : 'none';
+        });
+    
+        // 自動切り替え（ループ）
         setInterval(() => {
           images[currentIndex].style.display = 'none';
           currentIndex = (currentIndex + 1) % images.length;
           images[currentIndex].style.display = 'block';
-        }, 3000); // 切り替え秒数
-  
-        // PC用：マウスオーバーでテキスト表示
+        }, 3000);
+    
+        // PC：マウスオーバーで #work-description に表示
         wrapper.addEventListener('mouseenter', () => {
           if (window.innerWidth >= 768) {
-            const title = wrapper.dataset.title;
-            const date = wrapper.dataset.date;
-            description.innerHTML = `<p>${title}</p><p>${date}</p>`;
-            description.classList.add('visible');
+            titleEl.textContent = wrapper.dataset.title || '';
+            captionEl.textContent = wrapper.dataset.caption || '';
+            descBox.classList.add('visible');
           }
         });
-  
+    
         wrapper.addEventListener('mouseleave', () => {
           if (window.innerWidth >= 768) {
-            description.classList.remove('visible');
+            descBox.classList.remove('visible');
           }
         });
-  
-        // SP用：タップでテキストを下に表示（画像の直前に差し込む）
+    
+        // SP：タップで画像の上にテキストを挿入/削除
         wrapper.addEventListener('click', () => {
           if (window.innerWidth < 768) {
             const existing = wrapper.querySelector('.work-description');
-            if (!existing) {
+            if (existing) {
+              existing.remove();
+            } else {
               const text = document.createElement('div');
               text.classList.add('work-description');
-              text.innerHTML = `<p>${wrapper.dataset.title}</p><p>${wrapper.dataset.date}</p>`;
+              text.innerHTML = `
+                <p>${wrapper.dataset.title || ''}</p>
+                <p>${wrapper.dataset.caption || ''}</p>
+              `;
               wrapper.insertBefore(text, wrapper.firstChild);
-            } else {
-              existing.remove();
             }
           }
         });
       });
     });
-  </script>  
+   </script>
+    
 
   </body>
   </html>

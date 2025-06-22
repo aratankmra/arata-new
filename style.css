@@ -229,22 +229,25 @@ header {
   transition: opacity 0.3s;
 }
 
-/* テキスト説明表示 */
+/* テキストボックス（デフォルト非表示） */
 .work-description {
   position: fixed;
-  top: 50px; /* ヘッダーの下 */
-  left: 20px;
+  top: 50px; /* ヘッダー下 */
+  left: 20px; /* arata（新）と揃える */
+  background-color: #fff;
+  padding: 4px 6px;
+  font-size: 13px;
+  font-weight: 100;
+  line-height: 1.4;
+  display: none;
   z-index: 100;
   pointer-events: none;
-  background-color: #fff; /* ← 背景を白く */
-  padding: 8px 10px;
-  max-width: 300px;
-  box-sizing: border-box;
+  box-shadow: 0 0 0 1px transparent; /* 無駄な広がり防止 */
 }
 
 /* 表示時 */
 .work-description.visible {
-  opacity: 1;
+  display: block;
 }
 
 /* モバイル用：1カラム、説明は下に */
