@@ -205,9 +205,10 @@ header {
 
 /* Worksページ関連 */
 .work-item {
-  max-width: 736px;
+  width: 100%;
   margin: 0 auto 4rem;
-  padding: 0 1.5rem;
+  padding: 0; /* ← Journalと違って広く使うため */
+  box-sizing: border-box;
 }
 
 .work-content {
