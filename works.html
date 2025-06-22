@@ -199,27 +199,31 @@
   </script> 
 
 <!-- 画像のスクロールスクリプト -->  
-<script>
+  <script>
     document.addEventListener('DOMContentLoaded', () => {
       const autoScrollContainers = document.querySelectorAll('.auto-scroll');
-  
+    
       autoScrollContainers.forEach(container => {
-        let scrollAmount = 0;
-        const scrollStep = 300; // スクロールする幅（px）
-        const interval = 3000; // 自動でスクロールする間隔（ms）
-  
+        const images = container.querySelectorAll('img');
+        let currentIndex = 0;
+    
+        const scrollToImage = (index) => {
+          const image = images[index];
+          if (!image) return;
+    
+          const offsetLeft = image.offsetLeft;
+          container.scrollTo({ left: offsetLeft, behavior: 'smooth' });
+        };
+    
         setInterval(() => {
-          if (scrollAmount + container.clientWidth >= container.scrollWidth) {
-            container.scrollTo({ left: 0, behavior: 'smooth' });
-            scrollAmount = 0;
-          } else {
-            container.scrollBy({ left: scrollStep, behavior: 'smooth' }); // スムーズなスクロール
-            scrollAmount += scrollStep;
-          }
-        }, interval);
+          currentIndex++;
+          if (currentIndex >= images.length) currentIndex = 0;
+          scrollToImage(currentIndex);
+        }, 3000); // 切り替え間隔（ms）
       });
     });
   </script>
+    
 
   </body>
   </html>
