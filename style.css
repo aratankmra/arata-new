@@ -130,6 +130,7 @@ header {
   max-width: 736px;
   padding: 0 1.5rem;
   margin: 3rem auto 4rem;
+  letter-spacing: 0.1em; /* 例: 文字サイズの10% */
 }
 
 .footer {
