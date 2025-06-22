@@ -202,8 +202,6 @@
   
       const pixel = document.createElement('div');
       pixel.classList.add('pixel');
-      pixel.style.width = `${size}px`;
-      pixel.style.height = `${size}px`;
       pixel.style.left = `${Math.random() * 100}%`;
       pixel.style.top = `${Math.random() * 100}%`;
       pixel.style.backgroundColor = currentColor; // 毎回同じ色で出現
@@ -211,7 +209,7 @@
       container.appendChild(pixel);
 
       setTimeout(() => {
-        container.removeChild(pixel);
+       container.removeChild(pixel);
       }, 4000); // ピクセルの表示時間（ms）
     }
   
