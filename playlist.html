@@ -119,7 +119,62 @@
         </iframe>
       </div>
       
-      <!-- メニュー切り替えスクリプト（マウスオーバー） -->
+<!-- ピクセルのコンテナ -->
+<div id="pixel-container"></div>
+
+<!-- ピクセルアニメーションスクリプト -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('pixel-container');
+    const colors = ['#0050ff', '#ffff3c', '#ff64c8']; // 青・黄・ピンク
+    let currentColor = '#2196f3';
+    let idle = true;
+    let idleTimeout;
+    let generatorInterval;
+
+    function createPixel() {
+      if (!idle) return;
+  
+      const pixel = document.createElement('div');
+      pixel.classList.add('pixel');
+      pixel.style.left = `${Math.random() * 100}%`;
+      pixel.style.top = `${Math.random() * 100}%`;
+      pixel.style.backgroundColor = currentColor; // 毎回同じ色で出現
+  
+      container.appendChild(pixel);
+
+      setTimeout(() => {
+       container.removeChild(pixel);
+      }, 4000); // ピクセルの表示時間（ms）
+    }
+  
+    function resetIdleTimer() {
+      idle = false;
+      clearInterval(generatorInterval);
+      container.innerHTML = '';
+
+      clearTimeout(idleTimeout);
+      idleTimeout = setTimeout(() => {
+        idle = true;
+        startGenerating();
+      }, 5000); // 5秒間操作がなければ再開
+    }
+  
+    function startGenerating() {
+      currentColor = colors[Math.floor(Math.random() * colors.length)]; // 毎回1色だけ選ぶ
+      generatorInterval = setInterval(createPixel, 100); // 出現間隔
+    }
+  
+    // ユーザー操作でリセットされるイベント
+    ['mousemove', 'mousedown', 'keydown', 'touchstart', 'scroll'].forEach(event => {
+      window.addEventListener(event, resetIdleTimer);
+    });
+
+    startGenerating(); // 初回スタート
+  });
+  </script>
+
+<!-- メニュー切り替えスクリプト（マウスオーバー） -->
 <script>
     document.addEventListener('DOMContentLoaded', () => {
       const toggle = document.getElementById('menu-toggle');
