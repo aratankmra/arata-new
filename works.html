@@ -104,7 +104,7 @@
       
 
 <!-- 説明表示用（PC時） -->
-<div class="work-description" id="work-description"></div>
+<div class="work-description"></div>
 
 <!-- Worksページ本体 -->
 <section class="work-grid">
@@ -211,7 +211,7 @@
 <!-- 画像のスクロールスクリプト -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const wrappers = document.querySelectorAll('.work-wrapper');
+      const wrappers = document.querySelectorAll('.work-image-wrapper');
       const descBox = document.getElementById('work-description');
       const titleEl = document.getElementById('work-title');
       const captionEl = document.getElementById('work-caption');
