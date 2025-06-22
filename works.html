@@ -97,10 +97,17 @@
 
     </header>
 
-    <div class="text">
-      <p><br />準備中 Coming Soon...</p>
-
-    </div>
+    <section class="work-item">
+        <div class="work-content">
+          <div class="work-text">
+            <p>準備中 Coming soon…</p>
+            <p>2025年6月22日</p>
+          </div>
+          <div class="work-images auto-scroll">
+            <img src="/link/Works/uma_aka.png" alt="準備中">
+          </div>
+        </div>
+    </section>
 
 <!-- ピクセルのコンテナ -->
 <div id="pixel-container"></div>
@@ -187,6 +194,29 @@
       }
     });
   </script> 
+
+<!-- 画像のスクロールスクリプト -->  
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const autoScrollContainers = document.querySelectorAll('.auto-scroll');
+  
+      autoScrollContainers.forEach(container => {
+        let scrollAmount = 0;
+        const scrollStep = 300; // スクロールする幅（px）
+        const interval = 3000; // 自動でスクロールする間隔（ms）
+  
+        setInterval(() => {
+          if (scrollAmount + container.clientWidth >= container.scrollWidth) {
+            container.scrollTo({ left: 0, behavior: 'smooth' });
+            scrollAmount = 0;
+          } else {
+            container.scrollBy({ left: scrollStep, behavior: 'smooth' }); // スムーズなスクロール
+            scrollAmount += scrollStep;
+          }
+        }, interval);
+      });
+    });
+  </script>
 
   </body>
   </html>

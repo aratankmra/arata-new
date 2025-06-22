@@ -202,3 +202,77 @@ header {
     opacity: 0;
   }
 }
+
+/* Worksページ関連 */
+.work-item {
+  max-width: 736px;
+  margin: 0 auto 4rem;
+  padding: 0 1.5rem;
+}
+
+.work-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.work-text p {
+  font-size: 13px;
+  font-weight: 100;
+  line-height: 1.7;
+  margin: 0 0 0.5rem 0;
+}
+
+.work-images {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 12px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.work-images::-webkit-scrollbar {
+  display: none;
+}
+
+.work-images img {
+  height: auto;
+  flex: 0 0 auto;
+  object-fit: contain;
+  width: calc(50vw - 3rem); /* 顔文字右端 - 画面中央 */
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .work-content {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .work-text {
+    width: 50%;
+    padding-left: 20px; /* arata(新)と揃える */
+  }
+
+  .work-images {
+    width: 50%;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 767px) {
+  .work-content {
+    flex-direction: column;
+  }
+
+  .work-text,
+  .work-images {
+    padding: 0 20px;
+  }
+
+  .work-images img {
+    width: 100%;
+  }
+}
+/* ▲ Worksページ関連ここまで ▲ */
