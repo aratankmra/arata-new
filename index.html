@@ -187,10 +187,10 @@
 <!-- ピクセルのコンテナ -->
 <div id="circle-container"></div>
 
-<!-- 光る丸アニメーションスクリプト -->
+<!-- ピクセルアニメーションスクリプト -->
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const container = document.getElementById('circle-container');
+    const container = document.getElementById('pixel-container');
     const colors = ['#2196f3', '#f9f871', '#ff4fa3']; // 青・黄・ピンク
     let currentColor = '#2196f3';
     let idle = true;
@@ -201,8 +201,7 @@
       if (!idle) return;
   
       const pixel = document.createElement('div');
-      const size = 4; // 小さな正方形
-      pixel.classList.add('circle');
+      pixel.classList.add('pixel');
       pixel.style.width = `${size}px`;
       pixel.style.height = `${size}px`;
       pixel.style.left = `${Math.random() * 100}%`;
