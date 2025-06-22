@@ -203,77 +203,65 @@ header {
   }
 }
 
-/* Worksページ関連 */
-.work-item {
-  width: 100%;
-  margin: 0 auto 4rem;
-  padding: 0; /* ← Journalと違って広く使うため */
+/* Worksページの全体レイアウト */
+.work-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 80px 20px 40px; /* 上：ヘッダー下に余白、左右：arataと揃える */
   box-sizing: border-box;
 }
 
-.work-content {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+/* 画像1枚ずつのラッパー */
+.work-image-wrapper {
+  position: relative;
+  width: calc(33.333% - 26.666px); /* 3列＋gap対応 */
+  cursor: pointer;
 }
 
-.work-text p {
+/* 画像本体 */
+.work-image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: opacity 0.3s;
+}
+
+/* テキスト説明表示 */
+.work-description {
+  position: fixed;
+  top: 50px; /* ヘッダー高さと揃える */
+  left: 20px;
+  z-index: 10;
   font-size: 13px;
   font-weight: 100;
-  line-height: 1.7;
-  margin: 0 0 0.5rem 0;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
 }
 
-.work-images {
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  gap: 12px;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+/* 表示時 */
+.work-description.visible {
+  opacity: 1;
 }
 
-.work-images::-webkit-scrollbar {
-  display: none;
-}
-
-.work-images img {
-  height: auto;
-  flex: 0 0 auto;
-  object-fit: contain;
-  width: calc(50vw - 3rem); /* 顔文字右端 - 画面中央 */
-  max-width: 100%;
-}
-
-@media (min-width: 768px) {
-  .work-content {
-    flex-direction: row !important;
-    align-items: flex-start;
-  }
-
-  .work-text {
-    width: 50%;
-    padding-left: 20px; /* arata(新)と揃える */
-  }
-
-  .work-images {
-    width: 50%;
-    justify-content: flex-start;
-  }
-}
-
+/* モバイル用：1カラム、説明は下に */
 @media (max-width: 767px) {
-  .work-content {
-    flex-direction: column;
+  .work-grid {
+    display: block;
+    padding: 60px 20px 40px;
   }
 
-  .work-text,
-  .work-images {
-    padding: 0 20px;
-  }
-
-  .work-images img {
+  .work-image-wrapper {
     width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .work-description {
+    position: static;
+    opacity: 1 !important;
+    padding: 0 0 8px 0;
   }
 }
-/* ▲ Worksページ関連ここまで ▲ */

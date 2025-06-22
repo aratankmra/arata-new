@@ -95,22 +95,26 @@
             </div>
           </div>
 
-    </header>
+      </header>
 
-    <div style="height: 50px;"></div>
+<!-- 説明表示用（PC時） -->
+<div class="work-description" id="work-description"></div>
 
-    <section class="work-item">
-        <div class="work-content">
-          <div class="work-text">
-            <p>準備中 Coming soon…</p>
-            <p>2025年6月22日</p>
-          </div>
-          <div class="work-images auto-scroll">
-            <img src="/link/Works/uma_aka.png" alt="準備中">
-            <img src="/link/Works/uma.png" alt="準備中">
-          </div>
-        </div>
-    </section>
+<!-- Worksページ本体 -->
+<section class="work-grid">
+  <!-- 投稿① -->
+  <div class="work-image-wrapper" data-title="準備中 Coming soon…" data-date="2025年6月22日">
+    <img src="/link/Works/uma_aka.png" alt="準備中">
+    <img src="/link/Works/uma.png" alt="準備中" style="display: none;">
+  </div>
+
+  <!-- 投稿② -->
+  <div class="work-image-wrapper" data-title="準備中 Coming soon…" data-date="2025年6月22日">
+    <img src="/link/Works/uma.png" alt="準備中">
+    <img src="/link/Works/uma_aka.png" alt="準備中" style="display: none;">
+  </div>
+</section>
+
 
 <!-- ピクセルのコンテナ -->
 <div id="pixel-container"></div>
@@ -199,31 +203,55 @@
   </script> 
 
 <!-- 画像のスクロールスクリプト -->  
-  <script>
+<script>
     document.addEventListener('DOMContentLoaded', () => {
-      const autoScrollContainers = document.querySelectorAll('.auto-scroll');
-    
-      autoScrollContainers.forEach(container => {
-        const images = container.querySelectorAll('img');
+      const wrappers = document.querySelectorAll('.work-image-wrapper');
+      const description = document.getElementById('work-description');
+  
+      wrappers.forEach(wrapper => {
+        const images = wrapper.querySelectorAll('img');
         let currentIndex = 0;
-    
-        const scrollToImage = (index) => {
-          const image = images[index];
-          if (!image) return;
-    
-          const offsetLeft = image.offsetLeft;
-          container.scrollTo({ left: offsetLeft, behavior: 'smooth' });
-        };
-    
+  
+        // 自動切り替え
         setInterval(() => {
-          currentIndex++;
-          if (currentIndex >= images.length) currentIndex = 0;
-          scrollToImage(currentIndex);
-        }, 3000); // 切り替え間隔（ms）
+          images[currentIndex].style.display = 'none';
+          currentIndex = (currentIndex + 1) % images.length;
+          images[currentIndex].style.display = 'block';
+        }, 3000); // 切り替え秒数
+  
+        // PC用：マウスオーバーでテキスト表示
+        wrapper.addEventListener('mouseenter', () => {
+          if (window.innerWidth >= 768) {
+            const title = wrapper.dataset.title;
+            const date = wrapper.dataset.date;
+            description.innerHTML = `<p>${title}</p><p>${date}</p>`;
+            description.classList.add('visible');
+          }
+        });
+  
+        wrapper.addEventListener('mouseleave', () => {
+          if (window.innerWidth >= 768) {
+            description.classList.remove('visible');
+          }
+        });
+  
+        // SP用：タップでテキストを下に表示（画像の直前に差し込む）
+        wrapper.addEventListener('click', () => {
+          if (window.innerWidth < 768) {
+            const existing = wrapper.querySelector('.work-description');
+            if (!existing) {
+              const text = document.createElement('div');
+              text.classList.add('work-description');
+              text.innerHTML = `<p>${wrapper.dataset.title}</p><p>${wrapper.dataset.date}</p>`;
+              wrapper.insertBefore(text, wrapper.firstChild);
+            } else {
+              existing.remove();
+            }
+          }
+        });
       });
     });
-  </script>
-    
+  </script>  
 
   </body>
   </html>
