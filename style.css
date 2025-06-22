@@ -232,14 +232,14 @@ header {
 /* テキスト説明表示 */
 .work-description {
   position: fixed;
-  top: 50px; /* ヘッダー高さと揃える */
+  top: 50px; /* ヘッダーの下 */
   left: 20px;
-  z-index: 10;
-  font-size: 13px;
-  font-weight: 100;
-  opacity: 0;
-  transition: opacity 0.3s;
+  z-index: 100;
   pointer-events: none;
+  background-color: #fff; /* ← 背景を白く */
+  padding: 8px 10px;
+  max-width: 300px;
+  box-sizing: border-box;
 }
 
 /* 表示時 */
@@ -264,4 +264,12 @@ header {
     opacity: 1 !important;
     padding: 0 0 8px 0;
   }
+}
+
+/* テキストのスタイル（共通） */
+.work-description p {
+  margin: 0 0 4px 0;
+  line-height: 1.4;
+  font-size: 13px;
+  font-weight: 100;
 }
