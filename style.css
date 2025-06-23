@@ -265,8 +265,11 @@ header {
 
   .work-description {
     position: static;
-    opacity: 1 !important;
-    padding: 0 0 8px 0;
+    display: block;
+    padding: 4px 6px;
+    border: 0.5px solid #000;  /* または rgba(0, 0, 0, 0.3) で薄く */
+    background-color: #fff;
+    pointer-events: auto;
   }
 }
 
