@@ -265,11 +265,10 @@ header {
 
   .work-description {
     position: static;
-    display: block;
+    display: block; /* ← これを追加！ */
     padding: 4px 6px;
-    border: 0.5px solid #000;  /* または rgba(0, 0, 0, 0.3) で薄く */
+    border: 0.5px solid #000;
     background-color: #fff;
-    pointer-events: auto;
   }
 }
 
