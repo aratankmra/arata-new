@@ -252,6 +252,13 @@ header {
   display: block;
 }
 
+/* PCのみ：黒枠を追加 */
+@media (min-width: 768px) {
+  .work-description {
+    border: 0.5px solid #000;
+  }
+}
+
 /* モバイル用：1カラム、説明は下に */
 @media (max-width: 767px) {
   .work-grid {
