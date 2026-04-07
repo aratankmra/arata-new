@@ -8,7 +8,7 @@ html {
 body {
   font-family: "Manrope", "Noto Sans JP", sans-serif;
   font-style: normal;
-  font-weight: 250;
+  font-weight: 300;
   font-size: 13px;  
   line-height: 1.7;
   color: #000000;
@@ -45,7 +45,7 @@ header {
   color: #000;
   text-decoration: none;
   font-family: "Manrope", "Noto Sans JP", sans-serif;
-  font-weight: 250;
+  font-weight: 300;
   white-space: nowrap;
   flex: 1;
   display: flex;
@@ -57,7 +57,7 @@ header {
   color: #000 !important; /* ← ここが重要 */
   text-decoration: none;
   font-family: "Manrope", "Noto Sans JP", sans-serif;
-  font-weight: 250;
+  font-weight: 300;
   white-space: nowrap;
   letter-spacing: 0.05em; /* 例: 文字サイズの5% */
   margin-left: 20px;
@@ -70,7 +70,7 @@ header {
   margin-right: 20px;
   font-size: 13px;
   font-family: "Manrope", "Noto Sans JP", sans-serif;
-  font-weight: 250;
+  font-weight: 300;
   color: #000;
   cursor: default;
   white-space: nowrap;
