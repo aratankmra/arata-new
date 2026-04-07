@@ -6,9 +6,9 @@ html {
 
 /* background-colorで背景の色を変える */
 body {
-  font-family: "Inter", "Zen Kaku Gothic New", sans-serif;
+  font-family: "Inter", "Noto Sans JP", sans-serif;
   font-style: normal;
-  font-weight: 100;
+  font-weight: 200;
   font-size: 13px;  
   line-height: 1.7;
   color: #000000;
@@ -44,8 +44,8 @@ header {
   font-size: 13px;
   color: #000;
   text-decoration: none;
-  font-family: "Inter", "Zen Kaku Gothic New", sans-serif;
-  font-weight: 100;
+  font-family: "Inter", "Noto Sans JP", sans-serif;
+  font-weight: 200;
   white-space: nowrap;
   flex: 1;
   display: flex;
@@ -56,8 +56,8 @@ header {
   font-size: 13px;
   color: #000 !important; /* ← ここが重要 */
   text-decoration: none;
-  font-family: "Inter", "Zen Kaku Gothic New", sans-serif;
-  font-weight: 100;
+  font-family: "Inter", "Noto Sans JP", sans-serif;
+  font-weight: 200;
   white-space: nowrap;
   letter-spacing: 0.05em; /* 例: 文字サイズの5% */
   margin-left: 20px;
@@ -69,8 +69,8 @@ header {
   position: relative;
   margin-right: 20px;
   font-size: 13px;
-  font-family: "Inter", "Zen Kaku Gothic New", sans-serif;
-  font-weight: 100;
+  font-family: "Inter", "Noto Sans JP", sans-serif;
+  font-weight: 200;
   color: #000;
   cursor: default;
   white-space: nowrap;
